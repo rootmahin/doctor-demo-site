@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ডাঃ সাদমান রহমান (Dr. Sadman Rahman) | Spine, Orthopedic & Trauma Surgeon, Dhaka</title>
+<meta name="description" content="ডাঃ সাদমান রহমান — স্পাইন, অর্থোপেডিক ও ট্রমা বিশেষজ্ঞ ও সার্জন। Associate Professor, Rupsha Medical College Hospital, Dhaka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2a5b;
+  --navy-2:#123a7a;
+  --blue:#1f5fd1;
+  --teal:#0fa3a3;
+  --green:#127a4a;
+  --gold:#f2b51d;
+  --ink:#0f1b2d;
+  --muted:#5b6b82;
+  --line:#e3e9f2;
+  --bg:#f5f8fc;
+  --card:#ffffff;
+  --radius:18px;
+  --shadow:0 10px 30px -12px rgba(11,42,91,.18);
+  --shadow-lg:0 30px 60px -20px rgba(11,42,91,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri','Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;overflow-x:hidden}
+.en{font-family:'Plus Jakarta Sans','Hind Siliguri',sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1200px,100% - 40px);margin-inline:auto}
+section{padding:100px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+h1,h2,h3{line-height:1.25;color:var(--navy)}
+h2.title{font-size:clamp(28px,3.6vw,42px);font-weight:700;margin-bottom:16px}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+.center{text-align:center}
+.center .lead{margin-inline:auto}
+.center .eyebrow::after{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:16px;border:2px solid transparent;cursor:pointer;transition:.25s;font-family:inherit}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;box-shadow:0 12px 24px -10px rgba(31,95,209,.6)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(31,95,209,.7)}
+.btn-outline{border-color:var(--navy);color:var(--navy);background:#fff}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#ffc93d;transform:translateY(-2px)}
+
+/* Top bar */
+.topbar{background:var(--navy);color:#cfdcf5;font-size:14px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;padding:9px 0;gap:16px;flex-wrap:wrap}
+.topbar a{color:#fff;font-weight:600}
+.topbar .tb-left{display:flex;gap:22px;flex-wrap:wrap}
+.topbar span{display:inline-flex;align-items:center;gap:7px}
+.topbar svg{width:15px;height:15px;color:var(--gold)}
+
+/* Nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
+header.nav.scrolled{border-color:var(--line);box-shadow:0 8px 24px -16px rgba(11,42,91,.25)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center;color:#fff;box-shadow:0 8px 18px -8px rgba(15,163,163,.7)}
+.brand-mark svg{width:26px;height:26px}
+.brand b{display:block;font-size:19px;color:var(--navy);line-height:1.15}
+.brand small{font-family:'Plus Jakarta Sans';font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.menu{display:flex;gap:30px;list-style:none}
+.menu a{font-weight:500;color:var(--ink);position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--blue);transition:.25s}
+.menu a:hover::after,.menu a.active::after{width:100%}
+.menu a:hover{color:var(--blue)}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.hamburger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;border-radius:12px;color:var(--navy)}
+.hamburger svg{width:28px;height:28px}
+
+/* Hero */
+.hero{position:relative;padding:70px 0 0;background:
+  radial-gradient(900px 500px at 85% 20%,rgba(15,163,163,.14),transparent 60%),
+  radial-gradient(700px 500px at 0% 100%,rgba(31,95,209,.12),transparent 60%),
+  linear-gradient(180deg,#f3f7fd,#fff);overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero-text{padding-bottom:90px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px 8px 8px;border-radius:999px;font-size:14px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);margin-bottom:24px}
+.badge i{width:28px;height:28px;border-radius:50%;background:#e7f7f1;color:var(--green);display:grid;place-items:center;font-style:normal}
+.badge i svg{width:16px;height:16px}
+.hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;margin-bottom:10px;letter-spacing:-.5px}
+.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .role{font-family:'Plus Jakarta Sans';font-size:clamp(16px,1.8vw,20px);font-weight:700;color:var(--navy-2);margin-bottom:18px}
+.hero .degrees{color:var(--muted);font-size:17px;margin-bottom:30px;max-width:560px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap}
+.hero-meta div b{display:block;font-size:30px;color:var(--navy);font-family:'Plus Jakarta Sans';font-weight:800;line-height:1.1}
+.hero-meta div span{font-size:14.5px;color:var(--muted)}
+.hero-visual{position:relative;align-self:end;display:flex;justify-content:center}
+.hero-visual .blob{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:88%;aspect-ratio:1;border-radius:50%;background:linear-gradient(160deg,var(--blue) 0%,var(--teal) 100%);box-shadow:var(--shadow-lg)}
+.hero-visual .ring{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:104%;aspect-ratio:1;border-radius:50%;border:2px dashed rgba(31,95,209,.25);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+.hero-visual img{position:relative;z-index:2;width:100%;max-width:520px;-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent);mask-image:linear-gradient(180deg,#000 82%,transparent)}
+.float-card{position:absolute;z-index:3;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px;animation:float 5s ease-in-out infinite}
+.float-card .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;flex-shrink:0}
+.float-card .ic svg{width:22px;height:22px}
+.float-card b{display:block;color:var(--navy);font-size:15px;line-height:1.2}
+.float-card small{color:var(--muted);font-size:12.5px}
+.fc1{top:22%;left:-4%}.fc1 .ic{background:var(--blue)}
+.fc2{top:52%;right:-4%;animation-delay:1.5s}.fc2 .ic{background:var(--teal)}
+.fc3{bottom:12%;left:2%;animation-delay:.8s}.fc3 .ic{background:var(--gold);color:var(--navy)}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* Strip */
+.strip{background:var(--navy);color:#fff;padding:0;position:relative;z-index:5}
+.strip .container{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip .item{display:flex;gap:16px;align-items:center;padding:28px 22px;border-right:1px solid rgba(255,255,255,.1)}
+.strip .item:last-child{border-right:0}
+.strip .ic{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--gold);flex-shrink:0}
+.strip .ic svg{width:26px;height:26px}
+.strip b{display:block;font-size:17px}
+.strip small{color:#a9bde0;font-size:14px}
+
+/* About */
+.about .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.about-media{position:relative}
+.about-media .frame{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/4.6;background:linear-gradient(180deg,#e9f1fc,#d6e6fb)}
+.about-media .frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.about-media .exp{position:absolute;right:-24px;bottom:40px;background:linear-gradient(135deg,var(--gold),#ffcf4d);color:var(--navy);border-radius:22px;padding:22px 26px;box-shadow:var(--shadow-lg);text-align:center}
+.about-media .exp b{font-family:'Plus Jakarta Sans';font-size:40px;font-weight:800;display:block;line-height:1}
+.about-media .exp span{font-weight:600;font-size:15px}
+.about-media .dots{position:absolute;left:-30px;top:-30px;width:140px;height:140px;background-image:radial-gradient(var(--teal) 2px,transparent 2.5px);background-size:16px 16px;opacity:.35;z-index:-1}
+.creds{display:grid;gap:14px;margin:28px 0 32px}
+.cred{display:flex;gap:16px;align-items:flex-start;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:.25s}
+.cred:hover{border-color:#bfd3f5;box-shadow:var(--shadow);transform:translateX(4px)}
+.cred .ic{width:44px;height:44px;border-radius:12px;background:#eaf1fd;color:var(--blue);display:grid;place-items:center;flex-shrink:0}
+.cred .ic svg{width:22px;height:22px}
+.cred b{display:block;color:var(--navy);font-size:17px}
+.cred span{color:var(--muted);font-size:15px}
+
+/* Services */
+.services{background:var(--bg)}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:54px}
+.svc{background:#fff;border-radius:var(--radius);padding:32px 26px;border:1px solid var(--line);position:relative;overflow:hidden;transition:.35s}
+.svc::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,var(--navy),var(--blue));opacity:0;transition:.35s;z-index:0}
+.svc>*{position:relative;z-index:1}
+.svc .ic{width:62px;height:62px;border-radius:18px;background:#eaf1fd;color:var(--blue);display:grid;place-items:center;margin-bottom:22px;transition:.35s}
+.svc .ic svg{width:32px;height:32px}
+.svc h3{font-size:20px;margin-bottom:4px;transition:.35s}
+.svc .en-sub{font-family:'Plus Jakarta Sans';font-size:12.5px;font-weight:700;color:var(--teal);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;display:block;transition:.35s}
+.svc p{color:var(--muted);font-size:15.5px;transition:.35s}
+.svc:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:transparent}
+.svc:hover::before{opacity:1}
+.svc:hover h3,.svc:hover p{color:#fff}
+.svc:hover .en-sub{color:var(--gold)}
+.svc:hover .ic{background:rgba(255,255,255,.14);color:#fff}
+
+/* Conditions */
+.conditions .container{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{padding:11px 20px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:500;color:var(--navy);display:inline-flex;align-items:center;gap:8px;transition:.2s;font-size:15.5px}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* Why */
+.why{background:linear-gradient(160deg,var(--navy) 0%,#0e3672 60%,#0b4a6b 100%);color:#fff;position:relative;overflow:hidden}
+.why::after{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(rgba(15,163,163,.35),transparent 70%)}
+.why h2.title{color:#fff}
+.why .lead{color:#b8c9e8}
+.why .eyebrow{color:var(--gold)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px;position:relative;z-index:1}
+.why-card{padding:30px;border-radius:var(--radius);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:.3s}
+.why-card:hover{background:rgba(255,255,255,.1);transform:translateY(-6px)}
+.why-card .num{font-family:'Plus Jakarta Sans';font-weight:800;font-size:14px;color:var(--gold);letter-spacing:.1em;margin-bottom:14px}
+.why-card h3{color:#fff;font-size:21px;margin-bottom:8px}
+.why-card p{color:#b8c9e8;font-size:15.5px}
+
+/* Chambers */
+.chambers{background:var(--bg)}
+.chamber-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:54px}
+.chamber{background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column}
+.chamber-head{padding:26px 28px;display:flex;gap:18px;align-items:center;color:#fff}
+.chamber.c1 .chamber-head{background:linear-gradient(135deg,#0f6b45,#1b9a63)}
+.chamber.c2 .chamber-head{background:linear-gradient(135deg,#5b2a86,#7c3aed)}
+.chamber-head .logo{width:60px;height:60px;border-radius:16px;background:#fff;display:grid;place-items:center;flex-shrink:0;font-family:'Plus Jakarta Sans';font-weight:800;font-size:24px}
+.chamber.c1 .logo{color:#0f6b45}.chamber.c2 .logo{color:#5b2a86}
+.chamber-head h3{color:#fff;font-size:22px}
+.chamber-head small{font-family:'Plus Jakarta Sans';font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;font-weight:600}
+.chamber-body{padding:26px 28px 28px;display:grid;gap:16px;flex:1}
+.row{display:flex;gap:14px;align-items:flex-start}
+.row .ic{width:40px;height:40px;border-radius:12px;background:#eef3fb;color:var(--navy);display:grid;place-items:center;flex-shrink:0}
+.row .ic svg{width:20px;height:20px}
+.row b{display:block;color:var(--navy);font-size:15px}
+.row span{color:var(--muted);font-size:15.5px}
+.schedule{display:grid;gap:8px;margin-top:2px}
+.slot{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f6f9fd;border-radius:10px;font-weight:600;font-size:15.5px}
+.slot em{font-style:normal;color:var(--blue)}
+.chamber-foot{display:flex;gap:10px;padding:0 28px 28px;flex-wrap:wrap}
+.chamber-foot .btn{padding:12px 20px;font-size:15px;flex:1;justify-content:center}
+
+/* Appointment */
+.appoint .wrap{display:grid;grid-template-columns:1fr 1.1fr;border-radius:30px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff}
+.appoint-info{background:linear-gradient(160deg,var(--blue),var(--navy));color:#fff;padding:50px 44px;position:relative;overflow:hidden}
+.appoint-info::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:40px solid rgba(255,255,255,.06);right:-120px;bottom:-120px}
+.appoint-info h2{color:#fff;font-size:34px;margin-bottom:12px}
+.appoint-info p{color:#c9d8f3;margin-bottom:30px}
+.big-phone{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.1);border-radius:18px;padding:18px 20px;margin-bottom:16px;transition:.25s}
+.big-phone:hover{background:rgba(255,255,255,.18)}
+.big-phone .ic{width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;animation:pulse 2s infinite}
+.big-phone .ic svg{width:24px;height:24px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,181,29,.6)}70%{box-shadow:0 0 0 16px rgba(242,181,29,0)}100%{box-shadow:0 0 0 0 rgba(242,181,29,0)}}
+.big-phone small{color:#c9d8f3;display:block;font-size:14px}
+.big-phone b{font-family:'Plus Jakarta Sans';font-size:26px;letter-spacing:.02em}
+.note{font-size:14.5px;color:#c9d8f3;display:flex;gap:10px;margin-top:22px}
+.note svg{width:20px;height:20px;flex-shrink:0;color:var(--gold)}
+form.appt{padding:50px 44px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form.appt h3{grid-column:1/-1;font-size:24px}
+form.appt .full{grid-column:1/-1}
+.field label{display:block;font-weight:600;font-size:14.5px;margin-bottom:6px;color:var(--navy)}
+.field input,.field select,.field textarea{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:15.5px;background:#fbfcfe;transition:.2s;color:var(--ink)}
+.field textarea{resize:vertical;min-height:100px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(31,95,209,.12)}
+form.appt .btn{justify-content:center}
+.form-msg{grid-column:1/-1;display:none;padding:14px 18px;border-radius:12px;background:#e7f7ef;color:#0f6b45;font-weight:600}
+.form-msg.show{display:block}
+
+/* Testimonials */
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;position:relative;transition:.3s}
+.t-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.t-card .quote{position:absolute;right:24px;top:20px;font-family:Georgia,serif;font-size:80px;line-height:1;color:#e6eefb}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:14px;font-size:18px}
+.t-card p{color:#33445c;margin-bottom:22px;position:relative}
+.who{display:flex;align-items:center;gap:12px}
+.av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px}
+.who b{display:block;color:var(--navy)}
+.who small{color:var(--muted)}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq .container{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.acc{display:grid;gap:14px}
+.acc-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.acc-item button{width:100%;text-align:left;background:none;border:0;padding:20px 24px;font:inherit;font-weight:600;font-size:17px;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer}
+.acc-item button .pm{width:30px;height:30px;border-radius:50%;background:#eef3fb;display:grid;place-items:center;flex-shrink:0;transition:.3s;font-size:20px;color:var(--blue)}
+.acc-item.open button .pm{transform:rotate(45deg);background:var(--blue);color:#fff}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.acc-body p{padding:0 24px 22px;color:var(--muted)}
+
+/* CTA band */
+.band{padding:0;margin-top:-1px}
+.band .inner{background:linear-gradient(90deg,#0f6b45,#127a4a 50%,#0f6b45);border-radius:28px;padding:46px 50px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff;position:relative;overflow:hidden;transform:translateY(60px);box-shadow:var(--shadow-lg)}
+.band .inner::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at 90% 0,rgba(242,181,29,.3),transparent)}
+.band h2{color:#fff;font-size:clamp(24px,3vw,34px);position:relative}
+.band p{color:#cdeedd;position:relative}
+.band .btn{position:relative;flex-shrink:0}
+
+/* Footer */
+footer{background:#071c3f;color:#a9bde0;padding:130px 0 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px}
+footer .brand b{color:#fff}
+footer .brand small{color:#8ea4c9}
+footer h4{color:#fff;font-size:18px;margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:var(--gold)}
+footer p{font-size:15px}
+.f-contact li{display:flex;gap:10px;align-items:flex-start}
+.f-contact svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:4px}
+.copy{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* Floating */
+.fab{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:12px}
+.fab a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 12px 24px -8px rgba(0,0,0,.35);transition:.25s}
+.fab a:hover{transform:scale(1.08)}
+.fab a svg{width:26px;height:26px}
+.fab .call{background:var(--blue);animation:pulse-b 2s infinite}
+.fab .wa{background:#25d366}
+@keyframes pulse-b{0%{box-shadow:0 0 0 0 rgba(31,95,209,.55)}70%{box-shadow:0 0 0 16px rgba(31,95,209,0)}100%{box-shadow:0 0 0 0 rgba(31,95,209,0)}}
+.to-top{position:fixed;left:22px;bottom:22px;z-index:60;width:46px;height:46px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.3s;border:0;cursor:pointer}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top svg{width:22px;height:22px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* Mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:100;background:rgba(7,28,63,.5);opacity:0;pointer-events:none;transition:.3s}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu .panel{position:absolute;right:0;top:0;bottom:0;width:min(320px,85%);background:#fff;padding:26px;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column;gap:6px}
+.mobile-menu.open .panel{transform:none}
+.mobile-menu a{padding:14px 6px;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy);font-size:18px}
+.mobile-menu .close{align-self:flex-end;background:#eef3fb;border:0;width:42px;height:42px;border-radius:12px;font-size:24px;cursor:pointer;color:var(--navy);margin-bottom:10px}
+.mobile-menu .btn{margin-top:20px;justify-content:center}
+
+@media (max-width:1080px){
+  .menu{gap:20px}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .strip .container{grid-template-columns:repeat(2,1fr)}
+  .strip .item:nth-child(2){border-right:0}
+  .strip .item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  section{padding:76px 0}
+  .menu,.nav-cta .btn{display:none}
+  .hamburger{display:grid;place-items:center}
+  .topbar .tb-right{display:none}
+  .hero .container{grid-template-columns:1fr}
+  .hero-text{padding-bottom:20px;text-align:center}
+  .hero .degrees{margin-inline:auto}
+  .hero .actions,.hero-meta{justify-content:center}
+  .hero-visual{max-width:460px;margin:0 auto}
+  .about .container,.conditions .container,.faq .container{grid-template-columns:1fr;gap:44px}
+  .about-media{max-width:440px;margin:0 auto}
+  .why-grid,.t-grid{grid-template-columns:1fr 1fr}
+  .chamber-grid{grid-template-columns:1fr}
+  .appoint .wrap{grid-template-columns:1fr}
+  .band .inner{flex-direction:column;text-align:center;padding:38px 28px}
+}
+@media (max-width:600px){
+  .container{width:calc(100% - 32px)}
+  .topbar .tb-left span:nth-child(2){display:none}
+  .grid-4,.why-grid,.t-grid{grid-template-columns:1fr}
+  .strip .container{grid-template-columns:1fr}
+  .strip .item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.1)}
+  .brand small{display:none}
+  .brand b{font-size:17px}
+  .float-card{padding:9px 12px;gap:9px}
+  .float-card .ic{width:34px;height:34px}
+  .float-card b{font-size:13px}
+  .float-card small{font-size:11px}
+  .fc1{left:0}.fc2{right:0}
+  .about-media .exp{right:0;padding:16px 18px}
+  .about-media .exp b{font-size:30px}
+  form.appt{grid-template-columns:1fr;padding:34px 22px}
+  .appoint-info{padding:38px 24px}
+  .big-phone b{font-size:22px}
+  .f-grid{grid-template-columns:1fr}
+  .hero-meta{gap:22px}
+  .hero-meta div b{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-hosp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M12 9v6M9 12h6"/></symbol>
+    <symbol id="i-spine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="3.5" rx="1.2"/><rect x="7.5" y="7.2" width="9" height="3.5" rx="1.2"/><rect x="7" y="12.4" width="10" height="3.5" rx="1.2"/><rect x="7.5" y="17.6" width="9" height="3.5" rx="1.2"/><path d="M5 4h3M16 4h3M4.5 9h3M16.5 9h3M4 14h3M17 14h3"/></symbol>
+    <symbol id="i-bone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1.7-.6 2.5-.5a2.5 2.5 0 1 0-2-4 2.5 2.5 0 1 0-4-2c.1.8.2 1.8-.5 2.5l-6 6c-.7.7-1.7.6-2.5.5a2.5 2.5 0 1 0 2 4 2.5 2.5 0 1 0 4 2c-.1-.8-.2-1.8.5-2.5z"/></symbol>
+    <symbol id="i-knee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6c0 1.5 1 3 3 3s3-1.5 3-3V2"/><circle cx="12" cy="13.5" r="2"/><path d="M9 22v-5c0-1 1-2 3-2s3 1 3 2v5"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4" r="2"/><path d="m6 22 3-6 3 2v5M9 16l1.5-5.5L15 12l3 2M6 11l3-2.5 3.5 1M15 12l1-4"/></symbol>
+    <symbol id="i-scope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="m21 21-6.5-6.5M10 7v6M7 10h6"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M9 22v-6H7l2-7h6l2 7h-2v6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/><path d="M3.5 12h4l2-3 3 6 2-3h6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M10 17h10"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  </defs>
+</svg>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="tb-left">
+      <span><svg><use href="#i-phone"/></svg> সিরিয়াল: <a href="tel:+8801700000000" class="en">01700-000000</a></span>
+      <span><svg><use href="#i-clock"/></svg> শনি, সোম ও শুক্রবার চেম্বার</span>
+    </div>
+    <div class="tb-right"><span><svg><use href="#i-pin"/></svg> মিরপুর ও উত্তরা, ঢাকা</span></div>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#home" class="brand">
+      <div class="brand-mark"><svg><use href="#i-spine"/></svg></div>
+      <div><b>ডাঃ সাদমান রহমান</b><small>Spine · Orthopedic · Trauma</small></div>
+    </a>
+    <ul class="menu">
+      <li><a href="#home" class="active">হোম</a></li>
+      <li><a href="#about">পরিচিতি</a></li>
+      <li><a href="#services">চিকিৎসা সেবা</a></li>
+      <li><a href="#chambers">চেম্বার</a></li>
+      <li><a href="#faq">জিজ্ঞাসা</a></li>
+      <li><a href="#contact">যোগাযোগ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#appointment" class="btn btn-primary"><svg><use href="#i-cal"/></svg> অ্যাপয়েন্টমেন্ট</a>
+      <button class="hamburger" id="openMenu" aria-label="মেনু"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="panel">
+    <button class="close" id="closeMenu" aria-label="বন্ধ">×</button>
+    <a href="#home">হোম</a>
+    <a href="#about">পরিচিতি</a>
+    <a href="#services">চিকিৎসা সেবা</a>
+    <a href="#chambers">চেম্বার</a>
+    <a href="#faq">জিজ্ঞাসা</a>
+    <a href="#contact">যোগাযোগ</a>
+    <a href="#appointment" class="btn btn-primary">অ্যাপয়েন্টমেন্ট নিন</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-text">
+      <div class="badge reveal"><i><svg><use href="#i-check"/></svg></i> Associate Professor · RMCH, Dhaka</div>
+      <h1 class="reveal d1">ডাঃ <span>সাদমান</span> রহমান</h1>
+      <div class="role reveal d1">Spine, Orthopedic, Trauma Specialist &amp; Surgeon</div>
+      <p class="degrees reveal d2">এমবিবিএস (ঢামেক), এমএস (অর্থোপেডিক সার্জারী), এও ট্রমা বেসিক (সুইজারল্যান্ড)। মেরুদণ্ড, হাড়-জোড়া ও দুর্ঘটনাজনিত আঘাতের আধুনিক ও নির্ভরযোগ্য চিকিৎসা।</p>
+      <div class="actions reveal d2">
+        <a href="#appointment" class="btn btn-primary"><svg><use href="#i-cal"/></svg> অ্যাপয়েন্টমেন্ট নিন</a>
+        <a href="tel:+8801700000000" class="btn btn-outline"><svg><use href="#i-phone"/></svg> <span class="en">01700-000000</span></a>
+      </div>
+      <div class="hero-meta reveal d3">
+        <div><b class="en" data-count="15" data-suffix="+">0</b><span>বছরের অভিজ্ঞতা</span></div>
+        <div><b class="en" data-count="10000" data-suffix="+">0</b><span>সন্তুষ্ট রোগী</span></div>
+        <div><b class="en" data-count="2" data-suffix="">0</b><span>চেম্বার, ঢাকা</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="ring"></div>
+      <div class="blob"></div>
+      <img src="assets/doctor.svg" alt="ডাঃ সাদমান রহমান">
+      <div class="float-card fc1"><div class="ic"><svg><use href="#i-spine"/></svg></div><div><b>Spine Surgery</b><small>মেরুদণ্ডের চিকিৎসা</small></div></div>
+      <div class="float-card fc2"><div class="ic"><svg><use href="#i-bone"/></svg></div><div><b>Trauma Care</b><small>হাড় ভাঙ্গা ও আঘাত</small></div></div>
+      <div class="float-card fc3"><div class="ic"><svg><use href="#i-award"/></svg></div><div><b>AO Trauma</b><small>Switzerland</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Strip -->
+<div class="strip">
+  <div class="container">
+    <div class="item"><div class="ic"><svg><use href="#i-cap"/></svg></div><div><b>এমএস (অর্থোপেডিক)</b><small>উচ্চতর ডিগ্রিধারী সার্জন</small></div></div>
+    <div class="item"><div class="ic"><svg><use href="#i-award"/></svg></div><div><b>এও ট্রমা বেসিক</b><small>সুইজারল্যান্ড প্রশিক্ষিত</small></div></div>
+    <div class="item"><div class="ic"><svg><use href="#i-users"/></svg></div><div><b>BOS ও APOA সদস্য</b><small>দেশি ও আন্তর্জাতিক সোসাইটি</small></div></div>
+    <div class="item"><div class="ic"><svg><use href="#i-hosp"/></svg></div><div><b>২টি চেম্বার</b><small>মিরপুর ও উত্তরা</small></div></div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-media reveal">
+      <div class="dots"></div>
+      <div class="frame"><img src="assets/doctor.svg" alt="ডাঃ সাদমান রহমান"></div>
+      <div class="exp"><b class="en">15+</b><span>বছরের অভিজ্ঞতা</span></div>
+    </div>
+    <div class="reveal d1">
+      <span class="eyebrow">About the Doctor</span>
+      <h2 class="title">ডাক্তার সম্পর্কে জানুন</h2>
+      <p class="lead">ডাঃ সাদমান রহমান একজন অভিজ্ঞ স্পাইন, অর্থোপেডিক ও ট্রমা সার্জন। বর্তমানে তিনি রূপসা মেডিকেল কলেজ হাসপাতাল, ধানমন্ডি, ঢাকা-তে অ্যাসোসিয়েট প্রফেসর হিসেবে কর্মরত। রোগীর প্রতি সহানুভূতিশীল আচরণ ও আধুনিক চিকিৎসা পদ্ধতির সমন্বয়ে তিনি সঠিক রোগ নির্ণয় ও কার্যকর চিকিৎসা নিশ্চিত করেন।</p>
+      <div class="creds">
+        <div class="cred"><div class="ic"><svg><use href="#i-cap"/></svg></div><div><b>এমবিবিএস (ঢামেক), এমএস (অর্থোপেডিক সার্জারী)</b><span>ঢাকা মেডিকেল কলেজ</span></div></div>
+        <div class="cred"><div class="ic"><svg><use href="#i-award"/></svg></div><div><b>এও ট্রমা বেসিক কোর্স</b><span>AO Foundation, সুইজারল্যান্ড</span></div></div>
+        <div class="cred"><div class="ic"><svg><use href="#i-users"/></svg></div><div><b>সদস্য, বাংলাদেশ অর্থোপেডিক সোসাইটি</b><span>আজীবন সদস্য, এশিয়া প্যাসিফিক অর্থোপেডিক অ্যাসোসিয়েশন</span></div></div>
+        <div class="cred"><div class="ic"><svg><use href="#i-hosp"/></svg></div><div><b>অ্যাসোসিয়েট প্রফেসর</b><span class="en">Rupsha Medical College Hospital, Dhanmondi, Dhaka</span></div></div>
+      </div>
+      <a href="#appointment" class="btn btn-primary">পরামর্শ নিন <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Our Specialities</span>
+      <h2 class="title">যেসব চিকিৎসা সেবা প্রদান করা হয়</h2>
+      <p class="lead">মেরুদণ্ড, হাড়, জোড়া ও মাংসপেশির সমস্যায় অপারেশন ও অপারেশন-বিহীন উভয় ধরনের আধুনিক চিকিৎসা।</p>
+    </div>
+    <div class="grid-4">
+      <div class="svc reveal"><div class="ic"><svg><use href="#i-spine"/></svg></div><h3>স্পাইন সার্জারি</h3><span class="en-sub">Spine Surgery</span><p>ডিস্ক প্রল্যাপ্স, স্পাইনাল স্টেনোসিস, মেরুদণ্ডের হাড় ভাঙ্গা ও বাঁকা হওয়ার চিকিৎসা।</p></div>
+      <div class="svc reveal d1"><div class="ic"><svg><use href="#i-bone"/></svg></div><h3>ট্রমা ও ফ্র্যাকচার</h3><span class="en-sub">Trauma &amp; Fracture</span><p>দুর্ঘটনাজনিত হাড় ভাঙ্গা, জটিল ফ্র্যাকচার ও AO পদ্ধতিতে আধুনিক ফিক্সেশন।</p></div>
+      <div class="svc reveal d2"><div class="ic"><svg><use href="#i-knee"/></svg></div><h3>জয়েন্ট রিপ্লেসমেন্ট</h3><span class="en-sub">Joint Replacement</span><p>হাঁটু ও কোমরের জোড়া ক্ষয় (আর্থ্রাইটিস) — টোটাল নী ও হিপ রিপ্লেসমেন্ট।</p></div>
+      <div class="svc reveal d3"><div class="ic"><svg><use href="#i-scope"/></svg></div><h3>আর্থ্রোস্কোপি</h3><span class="en-sub">Arthroscopy</span><p>ছোট ছিদ্রের মাধ্যমে হাঁটু ও কাঁধের লিগামেন্ট ও মেনিসকাসের অপারেশন।</p></div>
+      <div class="svc reveal"><div class="ic"><svg><use href="#i-run"/></svg></div><h3>স্পোর্টস ইনজুরি</h3><span class="en-sub">Sports Injury</span><p>খেলাধুলাজনিত লিগামেন্ট ছেঁড়া, মচকানো ও মাংসপেশির আঘাতের চিকিৎসা।</p></div>
+      <div class="svc reveal d1"><div class="ic"><svg><use href="#i-heart"/></svg></div><h3>ব্যথা ব্যবস্থাপনা</h3><span class="en-sub">Pain Management</span><p>কোমর, ঘাড়, কাঁধ ও হাঁটু ব্যথার অপারেশন-বিহীন চিকিৎসা ও ইনজেকশন থেরাপি।</p></div>
+      <div class="svc reveal d2"><div class="ic"><svg><use href="#i-child"/></svg></div><h3>শিশু অর্থোপেডিক</h3><span class="en-sub">Paediatric Ortho</span><p>জন্মগত হাড়ের ত্রুটি, ক্লাব ফুট ও শিশুদের হাড় ভাঙ্গার চিকিৎসা।</p></div>
+      <div class="svc reveal d3"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>অস্টিওপোরোসিস</h3><span class="en-sub">Osteoporosis</span><p>হাড় ক্ষয় ও দুর্বলতা নির্ণয়, প্রতিরোধ ও দীর্ঘমেয়াদি চিকিৎসা পরিকল্পনা।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Conditions -->
+<section class="conditions">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Conditions Treated</span>
+      <h2 class="title">আপনার কি এই সমস্যাগুলো আছে?</h2>
+      <p class="lead" style="margin-bottom:28px">দীর্ঘদিনের ব্যথা বা চলাফেরায় কষ্টকে অবহেলা করবেন না। সময়মতো সঠিক চিকিৎসা নিলে অধিকাংশ সমস্যাই সম্পূর্ণ নিরাময়যোগ্য।</p>
+      <a href="#appointment" class="btn btn-primary">আজই সিরিয়াল দিন <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="chips reveal d1">
+      <span class="chip">কোমর ব্যথা</span>
+      <span class="chip">ঘাড় ব্যথা</span>
+      <span class="chip">ডিস্ক প্রল্যাপ্স (PLID)</span>
+      <span class="chip">সায়াটিকা</span>
+      <span class="chip">হাঁটু ব্যথা</span>
+      <span class="chip">আর্থ্রাইটিস</span>
+      <span class="chip">ফ্রোজেন শোল্ডার</span>
+      <span class="chip">হাড় ভাঙ্গা</span>
+      <span class="chip">লিগামেন্ট ইনজুরি</span>
+      <span class="chip">টেনিস এলবো</span>
+      <span class="chip">গোড়ালি ব্যথা</span>
+      <span class="chip">স্পন্ডাইলোসিস</span>
+      <span class="chip">বাত ব্যথা</span>
+      <span class="chip">কার্পাল টানেল</span>
+      <span class="chip">হাড় ক্ষয়</span>
+      <span class="chip">মেরুদণ্ডের টিবি</span>
+    </div>
+  </div>
+</section>
+
+<!-- Why -->
+<section class="why">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="title">কেন ডাঃ সাদমান রহমান?</h2>
+      <p class="lead">অভিজ্ঞতা, আন্তর্জাতিক প্রশিক্ষণ ও রোগীকেন্দ্রিক সেবার নির্ভরযোগ্য সমন্বয়।</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="num">01</div><h3>সঠিক রোগ নির্ণয়</h3><p>বিস্তারিত পরীক্ষা ও প্রয়োজনীয় ইমেজিংয়ের মাধ্যমে সমস্যার মূল কারণ খুঁজে বের করা।</p></div>
+      <div class="why-card reveal d1"><div class="num">02</div><h3>আন্তর্জাতিক মানের প্রশিক্ষণ</h3><p>সুইজারল্যান্ডের AO Foundation থেকে ট্রমা প্রশিক্ষণপ্রাপ্ত।</p></div>
+      <div class="why-card reveal d2"><div class="num">03</div><h3>অপারেশন শেষ উপায়</h3><p>প্রথমে ওষুধ, ফিজিওথেরাপি ও জীবনযাপনে পরিবর্তনের মাধ্যমে চিকিৎসার চেষ্টা।</p></div>
+      <div class="why-card reveal"><div class="num">04</div><h3>আধুনিক সার্জিক্যাল পদ্ধতি</h3><p>মিনিমালি ইনভেসিভ ও আধুনিক ইমপ্লান্টের মাধ্যমে দ্রুত আরোগ্য।</p></div>
+      <div class="why-card reveal d1"><div class="num">05</div><h3>সহানুভূতিশীল আচরণ</h3><p>রোগীর কথা মনোযোগ দিয়ে শোনা ও সহজ ভাষায় চিকিৎসা ব্যাখ্যা করা।</p></div>
+      <div class="why-card reveal d2"><div class="num">06</div><h3>ফলো-আপ ও পুনর্বাসন</h3><p>অপারেশনের পরে নিয়মিত ফলো-আপ ও পূর্ণাঙ্গ রিহ্যাবিলিটেশন গাইডলাইন।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Chambers -->
+<section class="chambers" id="chambers">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Chamber Schedule</span>
+      <h2 class="title">চেম্বার ও রোগী দেখার সময়</h2>
+      <p class="lead">সিরিয়ালের জন্য নিচের নম্বরে কল করুন। অনুগ্রহ করে নির্ধারিত সময়ের আগেই উপস্থিত থাকুন।</p>
+    </div>
+    <div class="chamber-grid">
+      <div class="chamber c1 reveal">
+        <div class="chamber-head">
+          <div class="logo">SD</div>
+          <div><small>Sebaghor Diagnostic Centre</small><h3>সেবাঘর ডায়াগনস্টিক সেন্টার</h3></div>
+        </div>
+        <div class="chamber-body">
+          <div class="row"><div class="ic"><svg><use href="#i-pin"/></svg></div><div><b>ঠিকানা</b><span>মিরপুর, ঢাকা</span></div></div>
+          <div class="row"><div class="ic"><svg><use href="#i-cal"/></svg></div><div style="flex:1"><b>রোগী দেখার সময়</b>
+            <div class="schedule">
+              <div class="slot">শনিবার <em>বিকাল ৪টা – ৭টা</em></div>
+              <div class="slot">সোমবার <em>বিকাল ৪টা – ৭টা</em></div>
+            </div></div></div>
+          <div class="row"><div class="ic"><svg><use href="#i-phone"/></svg></div><div><b>সিরিয়ালের জন্য</b><span class="en">01700-000000</span></div></div>
+        </div>
+        <div class="chamber-foot">
+          <a href="tel:+8801700000000" class="btn btn-primary"><svg><use href="#i-phone"/></svg> কল করুন</a>
+          <a href="https://www.google.com/maps/search/Mirpur+Dhaka" target="_blank" rel="noopener" class="btn btn-outline"><svg><use href="#i-pin"/></svg> ম্যাপ</a>
+        </div>
+      </div>
+      <div class="chamber c2 reveal d1">
+        <div class="chamber-head">
+          <div class="logo">N</div>
+          <div><small>Nilachol Specialized Hospital</small><h3>নীলাচল স্পেশালাইজড হাসপাতাল</h3></div>
+        </div>
+        <div class="chamber-body">
+          <div class="row"><div class="ic"><svg><use href="#i-pin"/></svg></div><div><b>ঠিকানা</b><span>সেক্টর ৭, উত্তরা, ঢাকা</span></div></div>
+          <div class="row"><div class="ic"><svg><use href="#i-cal"/></svg></div><div style="flex:1"><b>রোগী দেখার সময়</b>
+            <div class="schedule">
+              <div class="slot">শুক্রবার <em>সকাল ১০টা – দুপুর ১টা</em></div>
+            </div></div></div>
+          <div class="row"><div class="ic"><svg><use href="#i-phone"/></svg></div><div><b>সিরিয়ালের জন্য</b><span class="en">01700-000000</span></div></div>
+        </div>
+        <div class="chamber-foot">
+          <a href="tel:+8801700000000" class="btn btn-primary"><svg><use href="#i-phone"/></svg> কল করুন</a>
+          <a href="https://www.google.com/maps/search/Uttara+Dhaka" target="_blank" rel="noopener" class="btn btn-outline"><svg><use href="#i-pin"/></svg> ম্যাপ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment -->
+<section class="appoint" id="appointment">
+  <div class="container">
+    <div class="wrap reveal">
+      <div class="appoint-info">
+        <span class="eyebrow" style="color:var(--gold)">Book Appointment</span>
+        <h2>সিরিয়াল / অ্যাপয়েন্টমেন্ট</h2>
+        <p>ফর্মটি পূরণ করুন অথবা সরাসরি কল করুন। আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করে সিরিয়াল নিশ্চিত করবেন।</p>
+        <a href="tel:+8801700000000" class="big-phone">
+          <div class="ic"><svg><use href="#i-phone"/></svg></div>
+          <div><small>সিরিয়ালের জন্য কল করুন</small><b>01700-000000</b></div>
+        </a>
+        <a href="https://wa.me/8801700000000" target="_blank" rel="noopener" class="big-phone">
+          <div class="ic" style="background:#25d366;color:#fff;animation:none"><svg><use href="#i-wa"/></svg></div>
+          <div><small>হোয়াটসঅ্যাপে মেসেজ দিন</small><b style="font-size:20px">WhatsApp</b></div>
+        </a>
+        <div class="note"><svg><use href="#i-info"/></svg><span>জরুরি অবস্থায় অনুগ্রহ করে নিকটস্থ হাসপাতালের জরুরি বিভাগে যোগাযোগ করুন।</span></div>
+      </div>
+      <form class="appt" id="apptForm">
+        <h3>আপনার তথ্য দিন</h3>
+        <div class="field"><label for="f-name">রোগীর নাম *</label><input id="f-name" required placeholder="পূর্ণ নাম"></div>
+        <div class="field"><label for="f-phone">মোবাইল নম্বর *</label><input id="f-phone" type="tel" required placeholder="01XXXXXXXXX"></div>
+        <div class="field"><label for="f-age">বয়স</label><input id="f-age" type="number" min="0" placeholder="বছর"></div>
+        <div class="field"><label for="f-chamber">চেম্বার *</label>
+          <select id="f-chamber" required>
+            <option value="">নির্বাচন করুন</option>
+            <option>সেবাঘর ডায়াগনস্টিক, মিরপুর</option>
+            <option>নীলাচল স্পেশালাইজড হাসপাতাল, উত্তরা</option>
+          </select></div>
+        <div class="field full"><label for="f-date">পছন্দের তারিখ</label><input id="f-date" type="date"></div>
+        <div class="field full"><label for="f-msg">সমস্যার সংক্ষিপ্ত বিবরণ</label><textarea id="f-msg" placeholder="যেমন: ৩ মাস ধরে কোমর ব্যথা, পায়ে ঝিনঝিন করে..."></textarea></div>
+        <button class="btn btn-primary full" type="submit"><svg><use href="#i-cal"/></svg> অ্যাপয়েন্টমেন্ট রিকোয়েস্ট পাঠান</button>
+        <div class="form-msg" id="formMsg">ধন্যবাদ! আপনার রিকোয়েস্ট গ্রহণ করা হয়েছে। শীঘ্রই আমরা যোগাযোগ করবো। (ডেমো)</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" style="padding-top:20px">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Patient Stories</span>
+      <h2 class="title">রোগীদের অভিজ্ঞতা</h2>
+      <p class="lead">যাঁরা চিকিৎসা নিয়ে আবার স্বাভাবিক জীবনে ফিরে গেছেন।</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal"><div class="quote">“</div><div class="stars">★★★★★</div><p>দীর্ঘদিন কোমর ব্যথা ও পায়ে ঝিনঝিন সমস্যায় ভুগছিলাম। স্যার খুব ধৈর্য নিয়ে সব শুনেছেন এবং অপারেশন ছাড়াই এখন অনেক ভালো আছি।</p><div class="who"><div class="av" style="background:var(--blue)">র</div><div><b>রফিকুল ইসলাম</b><small>মিরপুর, ঢাকা</small></div></div></div>
+      <div class="t-card reveal d1"><div class="quote">“</div><div class="stars">★★★★★</div><p>বাইক দুর্ঘটনায় পায়ের হাড় ভেঙে গিয়েছিল। সফল অপারেশনের পর এখন স্বাভাবিকভাবে হাঁটতে পারছি। আন্তরিক ধন্যবাদ।</p><div class="who"><div class="av" style="background:var(--teal)">স</div><div><b>সাকিব হাসান</b><small>ডেমরা, ঢাকা</small></div></div></div>
+      <div class="t-card reveal d2"><div class="quote">“</div><div class="stars">★★★★★</div><p>আম্মার হাঁটুর ব্যথার জন্য দেখিয়েছিলাম। খুব সহজ ভাষায় সবকিছু বুঝিয়ে বলেছেন। চিকিৎসায় আম্মা এখন অনেক আরামে আছেন।</p><div class="who"><div class="av" style="background:var(--green)">ন</div><div><b>নুসরাত জাহান</b><small>উত্তরা, ঢাকা</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="title">সাধারণ জিজ্ঞাসা</h2>
+      <p class="lead" style="margin-bottom:28px">আরও কোনো প্রশ্ন থাকলে সরাসরি আমাদের কল করুন।</p>
+      <a href="tel:+8801700000000" class="btn btn-primary"><svg><use href="#i-phone"/></svg> <span class="en">01700-000000</span></a>
+    </div>
+    <div class="acc reveal d1">
+      <div class="acc-item open"><button>কিভাবে সিরিয়াল নিতে পারি? <span class="pm">+</span></button><div class="acc-body"><p>০১৭০০-০০০০০০ নম্বরে কল করে অথবা এই ওয়েবসাইটের অ্যাপয়েন্টমেন্ট ফর্ম পূরণ করে সিরিয়াল নিতে পারবেন।</p></div></div>
+      <div class="acc-item"><button>চেম্বারে আসার সময় কী কী সাথে আনবো? <span class="pm">+</span></button><div class="acc-body"><p>পূর্বের প্রেসক্রিপশন, এক্স-রে, এমআরআই, সিটি স্ক্যান ও অন্যান্য পরীক্ষার রিপোর্ট সাথে আনুন। এতে দ্রুত সঠিক রোগ নির্ণয় সম্ভব হয়।</p></div></div>
+      <div class="acc-item"><button>কোমর ব্যথা হলেই কি অপারেশন লাগে? <span class="pm">+</span></button><div class="acc-body"><p>না। অধিকাংশ কোমর ব্যথা ওষুধ, ফিজিওথেরাপি ও জীবনযাপনে পরিবর্তনের মাধ্যমেই ভালো হয়। শুধুমাত্র নির্দিষ্ট ক্ষেত্রে অপারেশনের প্রয়োজন হয়।</p></div></div>
+      <div class="acc-item"><button>অপারেশনের পর কতদিনে স্বাভাবিক হওয়া যায়? <span class="pm">+</span></button><div class="acc-body"><p>এটি অপারেশনের ধরন ও রোগীর অবস্থার উপর নির্ভর করে। সাধারণত আধুনিক পদ্ধতিতে অপারেশনের পর কয়েক সপ্তাহের মধ্যেই দৈনন্দিন কাজে ফেরা সম্ভব।</p></div></div>
+      <div class="acc-item"><button>কোন দিন কোন চেম্বারে বসেন? <span class="pm">+</span></button><div class="acc-body"><p>শনি ও সোমবার বিকাল ৪টা – ৭টা সেবাঘর ডায়াগনস্টিক সেন্টার, মিরপুর এবং শুক্রবার সকাল ১০টা – দুপুর ১টা নীলাচল স্পেশালাইজড হাসপাতাল, উত্তরায় রোগী দেখেন।</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="band">
+  <div class="container">
+    <div class="inner reveal">
+      <div><h2>আপনার সুস্থতাই আমাদের অঙ্গীকার</h2><p>ব্যথামুক্ত, সচল জীবনের পথে আজই প্রথম পদক্ষেপ নিন।</p></div>
+      <a href="#appointment" class="btn btn-gold"><svg><use href="#i-cal"/></svg> অ্যাপয়েন্টমেন্ট নিন</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="#home" class="brand" style="margin-bottom:18px">
+          <div class="brand-mark"><svg><use href="#i-spine"/></svg></div>
+          <div><b>ডাঃ সাদমান রহমান</b><small>Spine · Orthopedic · Trauma</small></div>
+        </a>
+        <p>এমবিবিএস (ঢামেক), এমএস (অর্থোপেডিক সার্জারী), এও ট্রমা বেসিক (সুইজারল্যান্ড)। অ্যাসোসিয়েট প্রফেসর, রূপসা মেডিকেল কলেজ হাসপাতাল।</p>
+      </div>
+      <div>
+        <h4>দ্রুত লিংক</h4>
+        <ul>
+          <li><a href="#about">পরিচিতি</a></li>
+          <li><a href="#services">চিকিৎসা সেবা</a></li>
+          <li><a href="#chambers">চেম্বার</a></li>
+          <li><a href="#appointment">অ্যাপয়েন্টমেন্ট</a></li>
+          <li><a href="#faq">জিজ্ঞাসা</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>চেম্বার সময়সূচি</h4>
+        <ul>
+          <li><b style="color:#fff">শনি ও সোমবার</b><br>বিকাল ৪টা – ৭টা (মিরপুর)</li>
+          <li><b style="color:#fff">শুক্রবার</b><br>সকাল ১০টা – দুপুর ১টা (উত্তরা)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>যোগাযোগ</h4>
+        <ul class="f-contact">
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+8801700000000" class="en">01700-000000</a></li>
+          <li><svg><use href="#i-pin"/></svg><span>সেবাঘর ডায়াগনস্টিক সেন্টার, মিরপুর, ঢাকা</span></li>
+          <li><svg><use href="#i-pin"/></svg><span>নীলাচল স্পেশালাইজড হাসপাতাল, উত্তরা, ঢাকা</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr"></span> ডাঃ সাদমান রহমান। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span>ডেমো ওয়েবসাইট — সকল তথ্য কাল্পনিক</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating -->
+<div class="fab">
+  <a href="https://wa.me/8801700000000" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+  <a href="tel:+8801700000000" class="call" aria-label="কল করুন"><svg><use href="#i-phone"/></svg></a>
+</div>
+<button class="to-top" id="toTop" aria-label="উপরে যান"><svg><use href="#i-up"/></svg></button>
+
+<script>
+// Sticky nav + to-top
+const nav=document.getElementById('nav'),toTop=document.getElementById('toTop');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>20);
+  toTop.classList.toggle('show',scrollY>600);
+},{passive:true});
+toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+// Mobile menu
+const mm=document.getElementById('mobileMenu');
+document.getElementById('openMenu').onclick=()=>mm.classList.add('open');
+document.getElementById('closeMenu').onclick=()=>mm.classList.remove('open');
+mm.addEventListener('click',e=>{if(e.target===mm||e.target.tagName==='A')mm.classList.remove('open')});
+
+// Reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Counters
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,t=+el.dataset.count,s=el.dataset.suffix||'';let st=null;
+  const step=ts=>{st??=ts;const p=Math.min((ts-st)/1600,1);el.textContent=Math.floor(t*(1-Math.pow(1-p,3))).toLocaleString('en-US')+s;if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);co.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// Active link on scroll
+const links=[...document.querySelectorAll('.menu a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))}
+}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id],footer[id]').forEach(s=>so.observe(s));
+
+// Accordion
+document.querySelectorAll('.acc-item').forEach(item=>{
+  const body=item.querySelector('.acc-body');
+  if(item.classList.contains('open'))body.style.maxHeight=body.scrollHeight+'px';
+  item.querySelector('button').onclick=()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.acc-item').forEach(i=>{i.classList.remove('open');i.querySelector('.acc-body').style.maxHeight=null});
+    if(!open){item.classList.add('open');body.style.maxHeight=body.scrollHeight+'px'}
+  };
+});
+
+// Form (demo)
+document.getElementById('apptForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const m=document.getElementById('formMsg');m.classList.add('show');e.target.reset();
+  setTimeout(()=>m.classList.remove('show'),6000);
+});
+
+// Min date = today
+const d=document.getElementById('f-date');d.min=new Date().toISOString().split('T')[0];
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

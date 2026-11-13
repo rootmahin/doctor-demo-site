@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700">
+  <!-- coat body -->
+  <path d="M30,700 C30,560 90,495 210,468 L262,448 L338,448 L390,468 C510,495 570,560 570,700 Z" fill="#f7f9fc" stroke="#d6dfeb" stroke-width="3"/>
+  <!-- neck -->
+  <path d="M258,340 L342,340 L342,455 Q300,480 258,455 Z" fill="#cf9268"/>
+  <!-- shirt V -->
+  <path d="M262,448 Q300,478 338,448 L300,610 Z" fill="#a9c8f0"/>
+  <path d="M262,448 L282,446 L300,478 L318,446 L338,448 L322,470 L300,480 L278,470 Z" fill="#c7dbf6"/>
+  <!-- tie -->
+  <path d="M290,478 L310,478 L306,496 L294,496 Z" fill="#123a7a"/>
+  <path d="M294,496 L306,496 L316,580 L300,604 L284,580 Z" fill="#0b2a5b"/>
+  <!-- lapels -->
+  <path d="M262,448 L228,522 L276,560 L300,612" fill="none" stroke="#d6dfeb" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M338,448 L372,522 L324,560 L300,612" fill="none" stroke="#d6dfeb" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M300,612 L300,700" stroke="#d6dfeb" stroke-width="3"/>
+  <!-- pocket + pens -->
+  <rect x="166" y="560" width="10" height="44" rx="4" fill="#1f5fd1"/>
+  <rect x="182" y="566" width="8" height="38" rx="4" fill="#0fa3a3"/>
+  <path d="M148,598 L222,598 L222,646 Q185,656 148,646 Z" fill="#eef2f8" stroke="#d6dfeb" stroke-width="3"/>
+  <!-- badge -->
+  <rect x="392" y="590" width="84" height="30" rx="7" fill="#eaf1fd" stroke="#c9d8f3" stroke-width="2"/>
+  <rect x="402" y="600" width="40" height="4" rx="2" fill="#1f5fd1"/>
+  <rect x="402" y="608" width="60" height="4" rx="2" fill="#9db4da"/>
+  <!-- stethoscope -->
+  <g fill="none" stroke="#2b3442" stroke-width="9" stroke-linecap="round">
+    <path d="M262,452 C226,520 228,590 270,614"/>
+    <path d="M338,452 C374,520 372,590 330,614"/>
+    <path d="M270,614 Q300,634 330,614"/>
+    <path d="M300,626 C300,640 340,640 360,628 C384,614 392,630 390,650"/>
+  </g>
+  <circle cx="390" cy="664" r="20" fill="#cfd8e3" stroke="#6b7785" stroke-width="5"/>
+  <circle cx="390" cy="664" r="8" fill="#9aa7b6"/>
+  <!-- ears -->
+  <ellipse cx="194" cy="268" rx="22" ry="32" fill="#d99a70"/>
+  <ellipse cx="406" cy="268" rx="22" ry="32" fill="#d99a70"/>
+  <!-- head -->
+  <ellipse cx="300" cy="255" rx="108" ry="128" fill="#e3a77c"/>
+  <!-- hair -->
+  <path d="M190,262 C176,150 236,100 306,100 C380,100 428,150 410,262 C404,214 388,186 360,176 C318,198 252,196 222,180 C204,200 194,228 190,262 Z" fill="#2b1d16"/>
+  <!-- beard shadow -->
+  <path d="M206,300 C214,370 258,384 300,384 C342,384 386,370 394,300 C380,345 345,360 300,360 C255,360 220,345 206,300 Z" fill="#3a2a22" opacity=".35"/>
+  <!-- brows -->
+  <path d="M232,222 Q258,208 284,220" fill="none" stroke="#2b1d16" stroke-width="8" stroke-linecap="round"/>
+  <path d="M316,220 Q342,208 368,222" fill="none" stroke="#2b1d16" stroke-width="8" stroke-linecap="round"/>
+  <!-- eyes -->
+  <ellipse cx="258" cy="262" rx="8" ry="10" fill="#2b1d16"/>
+  <ellipse cx="342" cy="262" rx="8" ry="10" fill="#2b1d16"/>
+  <circle cx="261" cy="258" r="2.5" fill="#fff"/>
+  <circle cx="345" cy="258" r="2.5" fill="#fff"/>
+  <!-- glasses -->
+  <g fill="none" stroke="#1b2230" stroke-width="6">
+    <rect x="220" y="238" width="76" height="50" rx="16"/>
+    <rect x="304" y="238" width="76" height="50" rx="16"/>
+    <path d="M296,256 Q300,250 304,256"/>
+    <path d="M220,252 L198,248"/>
+    <path d="M380,252 L402,248"/>
+  </g>
+  <!-- nose -->
+  <path d="M300,272 Q290,304 302,310" fill="none" stroke="#b97650" stroke-width="5" stroke-linecap="round"/>
+  <!-- cheeks -->
+  <circle cx="240" cy="310" r="16" fill="#e5735b" opacity=".18"/>
+  <circle cx="360" cy="310" r="16" fill="#e5735b" opacity=".18"/>
+  <!-- smile -->
+  <path d="M266,330 Q300,358 334,330" fill="none" stroke="#8a4b35" stroke-width="6" stroke-linecap="round"/>
+</svg>
